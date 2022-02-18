@@ -7,6 +7,7 @@ import AddIcon from '@mui/icons-material/Add';
 import StarIcon from '@mui/icons-material/Star';
 import PaletteIcon from '@mui/icons-material/Palette';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import { signIn } from 'next-auth/react'
 
 const Header = () => {
     return (
@@ -21,7 +22,7 @@ const Header = () => {
                 <HeaderNavLink Icon={PaletteIcon} name='Movies'></HeaderNavLink>
                 <HeaderNavLink Icon={OndemandVideoIcon} name='Series'></HeaderNavLink>
 
-                <button className='ml-auto uppercase border px-4 py-1.5 rounded tracking-wide hover:bg-white hover:text-black font-medium transition-all duration-200'>
+                <button onClick={signIn} className='ml-auto uppercase border px-4 py-1.5 rounded tracking-wide hover:bg-white hover:text-black font-medium transition-all duration-200'>
                     Login</button>
             </div>
         </div>
